@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "CompanyEmployees": {
+    "FuncionariosEmpresa.API": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": false,
