@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore;
 
-namespace FuncionariosEmpresa.API;
+namespace FuncionariosEmpresa.API.ContextFactory;
 
 public class RepositoryContextFactory : IDesignTimeDbContextFactory<RepositoryContext>
 {
@@ -14,7 +14,8 @@ public class RepositoryContextFactory : IDesignTimeDbContextFactory<RepositoryCo
             .Build();
 
         var builder = new DbContextOptionsBuilder<RepositoryContext>()
-            .UseSqlServer(configuration.GetConnectionString("sqlConnection"));
+            .UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
+                b => b.MigrationsAssembly("FuncionariosEmpresa.API"));
 
         return new RepositoryContext(builder.Options);
     }

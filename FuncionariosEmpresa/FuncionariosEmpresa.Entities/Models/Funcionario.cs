@@ -20,7 +20,7 @@ public class Funcionario
     public string? Cargo { get; set; }
 
     [ForeignKey(nameof(Empresa))]
-    public Guid CompanhiaId { get; set; }
+    public Guid EmpresaId { get; set; }
 
     public Empresa? Empresa { get; set; }
 }
