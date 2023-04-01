@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\FuncionariosEmpresa.LoggerService\FuncionariosEmpresa.LoggerService.csproj" />
     <ProjectReference Include="..\FuncionariosEmpresa.Repository\FuncionariosEmpresa.Repository.csproj" />
+    <ProjectReference Include="..\FuncionariosEmpresa.Service\FuncionariosEmpresa.Service.csproj" />
   </ItemGroup>
 
 </Project>

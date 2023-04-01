@@ -2,7 +2,7 @@
 
 namespace FuncionariosEmpresa.Repository;
 
-public class RepositoryManager
+public class RepositoryManager : IRepositoryManager
 {
     private readonly RepositoryContext _context;
     private readonly Lazy<IEmpresaRepository> _empresaRepository;
@@ -15,7 +15,7 @@ public class RepositoryManager
         _funcionarioRepository = new Lazy<IFuncionarioRepository>(() => new FuncionarioRepository(context));
     }
 
-    public IEmpresaRepository Companhia => _empresaRepository.Value;
+    public IEmpresaRepository Empresa => _empresaRepository.Value;
     public IFuncionarioRepository Funcionario => _funcionarioRepository.Value;
 
     public void Salvar()

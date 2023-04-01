@@ -1,6 +1,8 @@
 ﻿using FuncionariosEmpresa.Contracts;
 using FuncionariosEmpresa.LoggerService;
 using FuncionariosEmpresa.Repository;
+using FuncionariosEmpresa.Service;
+using FuncionariosEmpresa.Service.Contracts;
 
 namespace FuncionariosEmpresa.API.Extensions;
 
@@ -33,5 +35,10 @@ public static class ServiceExtensions
     public static void ConfigureRepositoryManager(this IServiceCollection services)
     {
         services.AddScoped<IRepositoryManager, RepositoryManager>();
+    }
+
+    public static void ConfigureServiceManager(this IServiceCollection services)
+    {
+        services.AddScoped<IServiceManager, ServiceManager>();
     }
 }
