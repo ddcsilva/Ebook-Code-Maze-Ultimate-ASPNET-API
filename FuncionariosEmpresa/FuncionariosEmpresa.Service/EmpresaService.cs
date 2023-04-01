@@ -1,5 +1,5 @@
-﻿using FuncionariosEmpresa.Contracts;
-using FuncionariosEmpresa.Entities.Models;
+﻿using AutoMapper;
+using FuncionariosEmpresa.Contracts;
 using FuncionariosEmpresa.Service.Contracts;
 using FuncionariosEmpresa.Shared.DataTransferObjects;
 
@@ -9,11 +9,13 @@ public class EmpresaService : IEmpresaService
 {
     private readonly IRepositoryManager _repository;
     private readonly ILoggerManager _logger;
+    private readonly IMapper _mapper;
 
-    public EmpresaService(IRepositoryManager repository, ILoggerManager logger)
+    public EmpresaService(IRepositoryManager repository, ILoggerManager logger, IMapper mapper)
     {
         _repository = repository;
         _logger = logger;
+        _mapper = mapper;
     }
 
     public IEnumerable<EmpresaDto> ObterTodasEmpresas(bool rastrearAlteracoes)
@@ -21,8 +23,7 @@ public class EmpresaService : IEmpresaService
         try
         {
             var empresas = _repository.Empresa.ObterTodasEmpresas(rastrearAlteracoes);
-            var empresasDto = empresas.Select(e => 
-                new EmpresaDto(e.Id, e.Nome ?? "", string.Join(' ', e.Endereco, e.Pais))).ToList();
+            var empresasDto = _mapper.Map<IEnumerable<EmpresaDto>>(empresas);
 
             return empresasDto;
         }
