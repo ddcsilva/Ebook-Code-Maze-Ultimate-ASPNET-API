@@ -13,11 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuncionariosEmpresa.Entitie
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuncionariosEmpresa.Repository", "FuncionariosEmpresa.Repository\FuncionariosEmpresa.Repository.csproj", "{13BF6E5E-E219-4718-AB1E-29BB8D701C26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuncionariosEmpresa.Service.Contracts", "FuncionariosEmpresa.Service.Contracts\FuncionariosEmpresa.Service.Contracts.csproj", "{1323CEBC-DBE1-437D-A37A-25A7EF14F9E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuncionariosEmpresa.Service.Contracts", "FuncionariosEmpresa.Service.Contracts\FuncionariosEmpresa.Service.Contracts.csproj", "{1323CEBC-DBE1-437D-A37A-25A7EF14F9E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuncionariosEmpresa.Service", "FuncionariosEmpresa.Service\FuncionariosEmpresa.Service.csproj", "{4A6D94D0-C07A-4CD6-8B93-0A6FCE904AC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuncionariosEmpresa.Service", "FuncionariosEmpresa.Service\FuncionariosEmpresa.Service.csproj", "{4A6D94D0-C07A-4CD6-8B93-0A6FCE904AC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuncionariosEmpresa.Presentation", "FuncionariosEmpresa.Presentation\FuncionariosEmpresa.Presentation.csproj", "{18B02593-7CEE-4F89-B1BD-E0C6DAF11E78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuncionariosEmpresa.Presentation", "FuncionariosEmpresa.Presentation\FuncionariosEmpresa.Presentation.csproj", "{18B02593-7CEE-4F89-B1BD-E0C6DAF11E78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuncionariosEmpresa.Shared", "FuncionariosEmpresa.Shared\FuncionariosEmpresa.Shared.csproj", "{DABFD12A-DD8C-4767-8D6B-B7ED8FA8803A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{18B02593-7CEE-4F89-B1BD-E0C6DAF11E78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18B02593-7CEE-4F89-B1BD-E0C6DAF11E78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18B02593-7CEE-4F89-B1BD-E0C6DAF11E78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DABFD12A-DD8C-4767-8D6B-B7ED8FA8803A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DABFD12A-DD8C-4767-8D6B-B7ED8FA8803A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DABFD12A-DD8C-4767-8D6B-B7ED8FA8803A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DABFD12A-DD8C-4767-8D6B-B7ED8FA8803A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,7 @@
 ﻿using FuncionariosEmpresa.Contracts;
 using FuncionariosEmpresa.Entities.Models;
 using FuncionariosEmpresa.Service.Contracts;
+using FuncionariosEmpresa.Shared.DataTransferObjects;
 
 namespace FuncionariosEmpresa.Service;
 
@@ -15,12 +16,15 @@ public class EmpresaService : IEmpresaService
         _logger = logger;
     }
 
-    public IEnumerable<Empresa> ObterTodasEmpresas(bool rastrearAlteracoes)
+    public IEnumerable<EmpresaDto> ObterTodasEmpresas(bool rastrearAlteracoes)
     {
         try
         {
             var empresas = _repository.Empresa.ObterTodasEmpresas(rastrearAlteracoes);
-            return empresas;
+            var empresasDto = empresas.Select(e => 
+                new EmpresaDto(e.Id, e.Nome ?? "", string.Join(' ', e.Endereco, e.Pais))).ToList();
+
+            return empresasDto;
         }
         catch (Exception ex)
         {

@@ -1,8 +1,8 @@
-﻿using FuncionariosEmpresa.Entities.Models;
+﻿using FuncionariosEmpresa.Shared.DataTransferObjects;
 
 namespace FuncionariosEmpresa.Service.Contracts;
 
 public interface IEmpresaService
 {
-    IEnumerable<Empresa> ObterTodasEmpresas(bool rastrearAlteracoes);
+    IEnumerable<EmpresaDto> ObterTodasEmpresas(bool rastrearAlteracoes);
 }
