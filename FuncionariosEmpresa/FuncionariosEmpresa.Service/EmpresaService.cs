@@ -20,17 +20,9 @@ public class EmpresaService : IEmpresaService
 
     public IEnumerable<EmpresaDto> ObterTodasEmpresas(bool rastrearAlteracoes)
     {
-        try
-        {
-            var empresas = _repository.Empresa.ObterTodasEmpresas(rastrearAlteracoes);
-            var empresasDto = _mapper.Map<IEnumerable<EmpresaDto>>(empresas);
+        var empresas = _repository.Empresa.ObterTodasEmpresas(rastrearAlteracoes);
+        var empresasDto = _mapper.Map<IEnumerable<EmpresaDto>>(empresas);
 
-            return empresasDto;
-        }
-        catch (Exception ex)
-        {
-            _logger.LogErro($"Algo deu erro no método da Service {nameof(ObterTodasEmpresas)} - {ex}");
-            throw;
-        }
+        return empresasDto;
     }
 }

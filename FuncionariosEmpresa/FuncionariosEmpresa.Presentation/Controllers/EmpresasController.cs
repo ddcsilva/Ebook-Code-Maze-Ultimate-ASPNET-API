@@ -17,15 +17,8 @@ public class EmpresasController : ControllerBase
     [HttpGet]
     public IActionResult ObterEmpresas()
     {
-        try
-        {
-            var empresas = _service.EmpresaService.ObterTodasEmpresas(rastrearAlteracoes: false);
+        var empresas = _service.EmpresaService.ObterTodasEmpresas(rastrearAlteracoes: false);
 
-            return Ok(empresas);
-        }
-        catch
-        {
-            return StatusCode(500, "Erro Interno do Servidor");
-        }
+        return Ok(empresas);
     }
 }
