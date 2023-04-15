@@ -1,4 +1,4 @@
-# Ebook-Code-Maze-Ultimate-ASPNET-API
+# Código-fonte do Ebook Ultimate ASP.NET Core Web API - Second Edition da Code Maze
 
 Este repositório contém o código de exemplo relacionado ao livro [Ultimate ASP.NET Core Web API - Second Edition](https://code-maze.com/ultimate-aspnetcore-webapi-second-edition/) adquirido no site Code Maze.
 
