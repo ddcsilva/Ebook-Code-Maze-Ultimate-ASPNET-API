@@ -12,5 +12,13 @@
                     .AllowAnyHeader());
             });
         }
+
+        public static void ConfigurarIISIntegration(this IServiceCollection services)
+        {
+            services.Configure<IISOptions>(options =>
+            {
+
+            });
+        }
     }
 }
